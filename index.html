@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity</title>
+</head>
+<body>
+    <h1>Image and Opacity</h1>
+    <form id="imageForm">
+        <label for="imageSelect">Choose an image:</label>
+        <select id="imageSelect">
+            <option value="hutan.jpg">Image 1</option>
+            <option value="hutan2.jpg">Image 2</option>
+            <option value="hutan3.jpg">Image 3</option>
+        </select>
+
+        <label for="opacitySelect">Choose opacity:</label>
+        <select id="opacitySelect">
+            <option value="1">1</option>
+            <option value="0.5">0.5</option>
+            <option value="0.2">0.2</option>
+        </select>
+
+        <button type="button" onclick="changeImage()">Kirim</button>
+    </form>
+
+    <div id="imageContainer">
+        <img id="displayedImage" src="hutan.jpg" style="width: 300px; opacity: 1;">
+    </div>
+
+    <script>
+        function changeImage() {
+            var imageSelect = document.getElementById("imageSelect").value;
+            var opacitySelect = document.getElementById("opacitySelect").value;
+
+            var image = document.getElementById("displayedImage");
+            image.src = imageSelect;
+            image.style.opacity = opacitySelect;
+        }
+    </script>
+</body>
+</html>
